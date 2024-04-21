@@ -59,6 +59,15 @@ void tongueMouth()
 
 }
 
+void evilMouth()
+{
+  for(int i = 52; i < 92; i++)
+  {
+    if(i==53 || i==58 || i==73 || i==70 || i==87 || i==88)
+     leds[i] = CRGB(10, 30, 255);
+  }  
+}
+
 void notMouth()
 {
   for(int i = 0; i < 95; i++)
@@ -108,6 +117,37 @@ void closeEye()
   }
 }
 
+void squintEyeRight()   //прищюренные глаза
+{
+  for (int i = 129; i < 158; i ++)
+  {
+    if(i==130 || i==131 || i==138 || i==139 || i==148   || i==149 || i==156 || i==157)
+      leds[i] = CRGB(40, 100, 255);
+    else if(i==132 || i==133 || i==140 || i==141    || i==146 || i==147 || i==154 || i==155)
+      leds[i] = CRGB(0, 0, 255);
+  }  
+}
+
+void squintEyeLeft()   //прищюренные глаза
+{
+  for (int i = 129; i < 158; i ++)
+  {
+    if(i==130 || i==131 || i==138 || i==139 || i==148   || i==149 || i==156 || i==157)
+      leds[i] = CRGB(0, 0, 255);
+    else if(i==132 || i==133 || i==140 || i==141    || i==146 || i==147 || i==154 || i==155)
+      leds[i] = CRGB(40, 100, 255);
+  }  
+}
+
+void sleepEye()
+{
+  for(int i = 131; i < 221; i++)
+  {
+    if(i==132 || i==133 || i==138 || i==139 || i==147   || i==150 || i==153 || i==156 || i==162 || i==173)
+     leds[i] = CRGB(0, 0, 255);
+  }  
+}
+
 void notEye()
 {
   for(int i = 130; i < 239; i++)
@@ -123,8 +163,6 @@ int brows(int a)
   }
 }
 
-
-
 void evilBrows()
 {
   leds[201] = CRGB(10, 30, 255);
@@ -134,3 +172,44 @@ void evilBrows()
   leds[228] = CRGB(10, 30, 255);
   leds[235] = CRGB(10, 30, 255);
 }
+
+void squintBrowsRight()
+{
+  leds[186] = CRGB(10, 30, 255);
+  leds[187] = CRGB(10, 30, 255);
+  leds[194] = CRGB(10, 30, 255);
+  leds[195] = CRGB(10, 30, 255);
+  leds[201] = CRGB(10, 30, 255);
+  leds[202] = CRGB(10, 30, 255);
+  leds[211] = CRGB(10, 30, 255);
+  leds[212] = CRGB(10, 30, 255);
+}
+
+void squintBrowsLeft()
+{
+  leds[181] = CRGB(10, 30, 255);
+  leds[182] = CRGB(10, 30, 255);
+  leds[196] = CRGB(10, 30, 255);
+  leds[197] = CRGB(10, 30, 255);
+  leds[203] = CRGB(10, 30, 255);
+  leds[204] = CRGB(10, 30, 255);
+  leds[220] = CRGB(10, 30, 255);
+  leds[221] = CRGB(10, 30, 255);
+}
+
+void sleepBrows()
+{
+  leds[195] = CRGB(10, 30, 255);
+  leds[196] = CRGB(10, 30, 255);
+  leds[197] = CRGB(10, 30, 255);
+  leds[203] = CRGB(10, 30, 255);
+  leds[204] = CRGB(10, 30, 255);
+  leds[202] = CRGB(10, 30, 255); 
+}
+
+
+
+
+
+
+

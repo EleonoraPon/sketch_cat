@@ -22,7 +22,11 @@ void loop()
   }
   else if(face_selection == 3)
   {
-    morgaet();
+    squint();
+  }
+  else if(face_selection == 4)
+  {
+    sleep();
   }
 
   

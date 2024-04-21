@@ -8,7 +8,7 @@ bool isPressed()
   if(digitalRead(3))//==1
   {
     while(digitalRead(3));//без этой строчки спамит 1
-    face_selection = random(1, 3);//0 занят лицом по умолчанию
+    face_selection = random(1, 5);//0 занят лицом по умолчанию
     return true;
   }
   return false;
@@ -97,7 +97,8 @@ void evil()
   notMouth();
   delay(10);
 
-  mouth();
+  //mouth();
+  evilMouth();
   openEye();
   evilBrows();
   FastLED.show();
@@ -107,9 +108,62 @@ void evil()
   face_selection = 0;
 }
 
+void squint()
+{
+  myMP3.play(4);
+  delay(10);
+  notEye();
+  notMouth();
+  delay(10);
 
+  mouth();
+  for(int i = 0; i < 2; i++)
+  {
+    squintEyeRight();
+    squintBrowsRight();
+    FastLED.show();
+    delay(700);
+    
+    notEye();
+    FastLED.show();
+    delay(5);
 
+    squintEyeLeft();
+    squintBrowsLeft();
+    FastLED.show();
+    delay(700);
 
+    notEye();
+    FastLED.show();
+    delay(5);
+
+  }
+
+  notEye();
+  FastLED.show();
+  delay(5);
+
+  face_selection = 0;
+}
+
+void sleep()
+{
+  myMP3.play(3);
+  delay(10);
+  notEye();
+  notMouth();
+  delay(10);
+
+  littleMouth();
+  sleepEye();
+  sleepBrows();
+
+  FastLED.show();
+  delay(3000);
+
+  //notMouth();
+  face_selection = 0;
+}
 
 void morgaet()
 {
